@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:lecteurtdb
+    username: sa
+    password:
+
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
