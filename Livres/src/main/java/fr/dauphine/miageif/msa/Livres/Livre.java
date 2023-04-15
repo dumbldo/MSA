@@ -16,6 +16,7 @@ public class Livre {
     private String titre;
     private String editeur;
     private int edition;
+    private boolean empruntId;
 
     public Livre() {
     }
@@ -26,6 +27,7 @@ public class Livre {
         this.titre = titre;
         this.editeur = editeur;
         this.edition = edition;
+        this.empruntId = false;
     }
 
     public Long getId() {
@@ -75,4 +77,7 @@ public class Livre {
     public void setEdition(int edition) {
         this.edition = edition;
     }
+
+    public boolean isEmprunted(){ return empruntId; }
+    public void setEmpruntId(boolean empruntId){ this.empruntId = empruntId; }
 }
