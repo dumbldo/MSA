@@ -2,6 +2,9 @@ package fr.dauphine.miageif.msa.Livres;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+import java.util.Optional;
+
 public interface LivreRepository extends JpaRepository<Livre, Long> {
     // lister
     List<Livre> findAll();
@@ -13,7 +16,7 @@ public interface LivreRepository extends JpaRepository<Livre, Long> {
     Optional<Livre> findById(Long id);
 
     // supprimer
-    void deleteById(long id);
+    void deleteById(Long id);
 
     // supprimer un liste de livres
     void deleteAllByIdInBatch(Iterable<Long> ids);
