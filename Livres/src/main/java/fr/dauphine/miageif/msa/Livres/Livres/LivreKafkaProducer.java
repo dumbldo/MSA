@@ -1,6 +1,5 @@
-package fr.dauphine.miageif.msa.Livres.Livres;
 
-import fr.dauphine.miageif.msa.Livres.Livre;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
