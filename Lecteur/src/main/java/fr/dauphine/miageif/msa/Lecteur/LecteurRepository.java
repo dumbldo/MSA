@@ -8,9 +8,8 @@ import java.util.Optional;
 
 public interface LecteurRepository extends JpaRepository<Lecteur, Long> {
 
-    List<Lecteur> saveAll(Iterable<Lecteur> lecteurs);
 
-    <S extends Lecteur> save(S lecteur);
+    <S extends Lecteur> S save(S lecteur);
 
     Optional<Lecteur> findById(Long id);
 
@@ -18,7 +17,10 @@ public interface LecteurRepository extends JpaRepository<Lecteur, Long> {
 
     void deleteById(Long id);
 
+    boolean existsById(Long id);
 
+   
+    
 
 
 }

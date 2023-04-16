@@ -28,7 +28,12 @@ public class LecteurService {
     public List<Lecteur> getAllLecteurs() {
         return lecteurRepository.findAll();
     }
-
+    
+    public Lecteur findById(Long id) {
+        return lecteurRepository.findById(id).orElse(null);
+    }
+    
+    
     public Lecteur updateLecteur(Long id, Lecteur updatedLecteur) {
         return lecteurRepository.findById(id).map(lecteur -> {
             lecteur.setGenre(updatedLecteur.getGenre());
@@ -46,4 +51,9 @@ public class LecteurService {
     public void deleteLecteurById(Long id) {
         lecteurRepository.deleteById(id);
     }
+
+    public boolean existsById(Long id) {
+        return lecteurRepository.existsById(id);
+    }
+    
 }
