@@ -1,5 +1,6 @@
 package fr.miage.dauphine.MSA.Emprunt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -8,6 +9,8 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import org.springframework.kafka.core.KafkaTemplate;
 
 @RestController
 public class EmpruntController {
@@ -20,13 +23,21 @@ public class EmpruntController {
 
   public EmpruntController(EmpruntService service) {
     this.service = service;
-  }
+  } ;
+
+
+  @Autowired
+  private KafkaTemplate<String, Emprunt> kafkaTemplate;
 
   @PostMapping(path = "/create-emprunt")
-  public void createEmprunt(@RequestBody Emprunt emprunt){
-    service.create(emprunt);
-  }
+  public ResponseEntity<Emprunt> createEmprunt(@RequestBody Emprunt emprunt) {
+      // Vérifier si le lecteur et le livre existent avant de créer un emprunt
+      kafkaTemplate.send("check-reader-existence", emprunt);
+      kafkaTemplate.send("check-book-availability", emprunt);
 
+      // L'écoute des réponses et la logique de création de l'emprunt devraient être implémentées dans le consommateur Kafka
+      return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+  }
   @GetMapping("/get-emprunt-by-id/{id}")
   public Optional<Emprunt> getEmpruntById(@PathVariable Long id){
     Optional<Emprunt> emprunt = empruntRepository.findOneById(id);
@@ -66,4 +77,8 @@ public class EmpruntController {
     List<Long> idList = map.get("ids");
     service.deleteEmpruntByIds(idList);
   }
+
+
+
+  
 }
