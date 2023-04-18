@@ -1,5 +1,8 @@
 server:
   port: 8081
+
+topic:
+  name: t.emprunt.order
   
 spring:
 

@@ -5,8 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.Optional;
 
@@ -17,8 +16,11 @@ public class EmpruntService {
 
     @Autowired
     private EmpruntRepository empruntRepository;
+    private final Producer producer;
 
-
+    public EmpruntService(Producer producer){
+        this.producer = producer;
+    }
 
     public void someMethod() {
         log.debug("Debug message");
@@ -29,6 +31,11 @@ public class EmpruntService {
 
 
     public Emprunt create(Emprunt emprunt){
+        try {
+            producer.sendMessage(emprunt);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return empruntRepository.save(emprunt);
     }
 

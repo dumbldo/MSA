@@ -16,18 +16,18 @@ public class Livre {
     private String titre;
     private String editeur;
     private int edition;
-    private boolean empruntId;
+    private Long empruntId;
 
     public Livre() {
     }
 
-    public Livre(String isbn, String auteur, String titre, String editeur, int edition) {
+    public Livre(String isbn, String auteur, String titre, String editeur, int edition, Long empruntId) {
         this.isbn = isbn;
         this.auteur = auteur;
         this.titre = titre;
         this.editeur = editeur;
         this.edition = edition;
-        this.empruntId = false;
+        this.empruntId = empruntId;
     }
 
     public Long getId() {
@@ -78,6 +78,11 @@ public class Livre {
         this.edition = edition;
     }
 
-    public boolean isEmprunted(){ return empruntId; }
-    public void setEmpruntId(boolean empruntId){ this.empruntId = empruntId; }
+    public Long getEmpruntId() {
+        return empruntId;
+    }
+
+    public void setEmpruntId(Long empruntId) {
+        this.empruntId = empruntId;
+    }
 }

@@ -31,11 +31,18 @@ public class LivreService {
             livre.setTitre(updatedLivre.getTitre());
             livre.setEditeur(updatedLivre.getEditeur());
             livre.setEdition(updatedLivre.getEdition());
+            livre.setEmpruntId(updatedLivre.getEmpruntId());;
             return livreRepository.save(livre);
         }).orElseGet(() -> {
             updatedLivre.setId(id);
             return livreRepository.save(updatedLivre);
         });
+    }
+
+    public void updateEmpruntId(EmpruntDto empruntDto) {
+        Livre livre = livreRepository.findById(empruntDto.getLivreId()).get();
+        livre.setEmpruntId(empruntDto.getId());
+        updateLivre(empruntDto.getLivreId(), livre);
     }
 
     public void deleteLivreById(Long id) {
