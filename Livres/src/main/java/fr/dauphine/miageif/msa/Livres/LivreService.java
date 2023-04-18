@@ -34,8 +34,7 @@ public class LivreService {
             livre.setEmpruntId(updatedLivre.getEmpruntId());;
             return livreRepository.save(livre);
         }).orElseGet(() -> {
-            updatedLivre.setId(id);
-            return livreRepository.save(updatedLivre);
+            return null;
         });
     }
 

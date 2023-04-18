@@ -2,12 +2,14 @@ package fr.dauphine.miageif.msa.Livres;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
@@ -42,9 +44,12 @@ public class LivreController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Livre> updateLivre(@PathVariable Long id, @RequestBody Livre updatedLivre) {
+    public ResponseEntity<String> updateLivre(@PathVariable Long id, @RequestBody Livre updatedLivre) {
         Livre updated = livreService.updateLivre(id, updatedLivre);
-        return ResponseEntity.ok(updated);
+        if (updated == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Le livre avec l'id " + id + " est introuvable.");
+        }
+        return ResponseEntity.ok("Livre avec id " + id + " modifié !");
     }
 
     @DeleteMapping("/{id}")
