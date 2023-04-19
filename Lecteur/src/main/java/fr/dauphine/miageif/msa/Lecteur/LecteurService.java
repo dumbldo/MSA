@@ -52,8 +52,12 @@ public class LecteurService {
         lecteurRepository.deleteById(id);
     }
 
-    public boolean existsById(Long id) {
-        return lecteurRepository.existsById(id);
+    public void setLastLivre(EmpruntDto empruntDto) {
+        Long livreId = empruntDto.getLivreId();
+        if(getLecteurById(empruntDto.getId()).isEmpty()) { return; }
+        Lecteur lecteur = getLecteurById(empruntDto.getId()).get();
+        lecteur.setLastLivre(livreId);
+        updateLecteur(empruntDto.getLecteurId(), lecteur);
     }
-    
+
 }

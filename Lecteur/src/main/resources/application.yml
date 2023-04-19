@@ -1,6 +1,9 @@
 server:
   port: 8082
 
+topic:
+  name: t.emprunt.order
+
 spring:
   datasource:
     url: jdbc:h2:mem:lecteurtdb

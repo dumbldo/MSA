@@ -1,42 +1,33 @@
 package fr.dauphine.miageif.msa.Lecteur;
 
-import org.apache.kafka.clients.consumer.ConsumerRecord;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import fr.dauphine.miageif.msa.Lecteur.LecteurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import static org.apache.kafka.common.requests.DeleteAclsResponse.log;
 
 @Service
 public class LecteurKafkaConsumer {
 
-    @Autowired
-    private LecteurService lecteurService;
+    private static final String orderTopic = "${topic.name}";
+
+    private final ObjectMapper objectMapper;
+    private final LecteurService lecteurService;
 
     @Autowired
-    private LecteurKafkaProducer lecteurKafkaProducer;
-
-    @Autowired
-    private KafkaTemplate<String, Lecteur> kafkaTemplate;
- 
-    public void send(String topicName, Lecteur lecteur) {
-        kafkaTemplate.send(topicName, lecteur);
+    public LecteurKafkaConsumer(ObjectMapper objectMapper, LecteurService lecteurService) {
+        this.objectMapper = objectMapper;
+        this.lecteurService = lecteurService;
     }
 
-    @KafkaListener(topics = "emprunt-livre", groupId = "lecteur-group-id")
-    public void listen(ConsumerRecord<String, Lecteur> record) {
-        Lecteur lecteur = record.value();
-        // Vérifiez si le lecteur existe
-        boolean lecteurExiste = lecteurService.existsById(lecteur.getId());
-        if (lecteurExiste) {
-            // Envoyez une réponse au microservice Emprunt
-            Lecteur existingLecteur = lecteurService.findById(lecteur.getId());
-            lecteurKafkaProducer.send("lecteur-exists", existingLecteur);
-        }
-
+    @KafkaListener(topics = orderTopic)
+    public void consumeMessage(String message) throws JsonProcessingException {
+        log.info("message consumed {}", message);
+        EmpruntDto empruntDto = objectMapper.readValue(message, EmpruntDto.class);
+        lecteurService.setLastLivre(empruntDto);
     }
-
-
-  
-    
 }
 

@@ -1,10 +1,8 @@
 package fr.dauphine.miageif.msa.Lecteur;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 
 @Entity
@@ -18,16 +16,18 @@ public class Lecteur {
     private String prenom;
     private String dateNaissance;
     private String adresse;
+    private Long lastLivre;
 
     public Lecteur() {
     }
 
-    public Lecteur(String genre, String nom, String prenom, String dateNaissance, String adresse) {
+    public Lecteur(String genre, String nom, String prenom, String dateNaissance, String adresse, Long lastLivre) {
         this.genre = genre;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
         this.adresse = adresse;
+        this.lastLivre = lastLivre;
     }
 
     public Long getId() {
@@ -76,5 +76,14 @@ public class Lecteur {
 
     public void setAdresse(String adresse) {
         this.adresse = adresse;
+    }
+
+
+    public Long getLastLivre() {
+        return lastLivre;
+    }
+
+    public void setLastLivre(Long lastLivre) {
+        this.lastLivre = lastLivre;
     }
 }
