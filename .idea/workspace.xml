@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0159f6d7-524f-4339-ac0d-b64bc9d72b9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/Emprunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/Emprunt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/EmpruntController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/EmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/src/main/java/fr/miage/dauphine/MSA/Emprunt/EmpruntService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/src/test/java/fr/miage/dauphine/MSA/MsaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/src/test/java/fr/miage/dauphine/MSA/Emprunt/MsaApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Config.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Emprunt.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Emprunt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntKafkaProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntKafkaProducer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/EmpruntService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/MsaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/MsaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Emprunt/target/classes/fr/miage/dauphine/MSA/Emprunt/Producer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emprunt/target/test-classes/fr/miage/dauphine/MSA/MsaApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurKafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurKafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/msa/Lecteur/LecteurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/main/java/fr/dauphine/miageif/lecteur/LecteurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lecteur/src/test/java/fr/dauphine/miageif/msa/MsaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecteur/src/test/java/fr/dauphine/miageif/lecteur/MsaApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livres/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Livres/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livres/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Livres/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livres/src/main/java/fr/dauphine/miageif/msa/Livres/LivreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Livres/src/main/java/fr/dauphine/miageif/msa/Livres/LivreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livres/src/main/java/fr/dauphine/miageif/msa/Livres/LivreKafkaConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livres/src/main/java/fr/dauphine/miageif/msa/Livres/LivreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Livres/src/main/java/fr/dauphine/miageif/msa/Livres/LivreService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="kafka-last-update" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,36 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Notification.DoNotAsk-null&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sarahkerriche/Desktop/MSA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1ff1c7cffd6041dbdff3b42c514eeac6&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/sarahkerriche/Desktop/MSA",
+    "show.run.dashboard.notification": "false"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.LivreApplication (1)">
-    <configuration name="All in MSA (1) (fr.miage.dauphine.)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MSA (1) (fr.miage.dauphine.)" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.MsaApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="MSA" />
       <method v="2">
@@ -109,36 +65,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LecteurApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MSA (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.dauphine.miageif.msa.Lecteur.LecteurApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LecteurApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="MSA (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.dauphine.miageif.lecteur.LecteurApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.dauphine.miageif.lecteur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LecteurApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="MSA (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="fr.dauphine.miageif.msa.Lecteur.LecteurApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LivreApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MSA (3)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.dauphine.miageif.msa.Livres.LivreApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,13 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MsaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MSA (1) (fr.miage.dauphine.)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.miage.dauphine.MSA.Emprunt.MsaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MsaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="fr.miage.dauphine.MSA.Emprunt.MsaApplication" />
@@ -164,12 +86,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.LecteurApplication (2)" />
-        <item itemvalue="JUnit.All in MSA (1) (fr.miage.dauphine.)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -180,8 +96,6 @@
       <option name="presentableId" value="Default" />
       <updated>1681664293509</updated>
       <workItem from="1681664311431" duration="970000" />
-      <workItem from="1681823312490" duration="773000" />
-      <workItem from="1681825066813" duration="17696000" />
     </task>
     <servers />
   </component>

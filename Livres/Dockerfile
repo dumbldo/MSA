@@ -1,5 +1,5 @@
 # Use an OpenJDK Runtime as a parent image
-FROM openjdk:17-jdk-alpine
+FROM adoptopenjdk/openjdk17:alpine-jre
 # Define environment variables
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS JAVA_OPTS=""
 # Set the working directory to /app
@@ -9,4 +9,4 @@ ADD target/*.jar app.jar
 # Make port 8080 available to the world outside this container
 EXPOSE 8081
 # Run app.jar when the container launches
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+CMD ["java", "-jar", "/app/app.jar"]

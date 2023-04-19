@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -40,13 +37,6 @@ public class EmpruntService {
             e.printStackTrace();
         }
         return empruntRepository.save(emprunt);
-    }
-
-    public void createAll(List<Emprunt> emprunts) {
-        for (Emprunt emprunt : emprunts) {
-            // logique de création d'emprunt pour chaque objet Emprunt dans la liste
-            create(emprunt);
-        }
     }
 
     public Optional<Emprunt> update(Long id, Emprunt newEmprunt){

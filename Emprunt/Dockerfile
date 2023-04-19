@@ -1,5 +1,5 @@
 # Use an OpenJDK Runtime as a parent image
-FROM openjdk:17-jdk-alpine
+FROM adoptopenjdk/openjdk17:alpine-jre
 # Define environment variables
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS JAVA_OPTS=""
 # Set the working directory to /app

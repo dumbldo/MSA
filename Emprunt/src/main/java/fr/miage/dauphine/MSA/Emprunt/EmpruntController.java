@@ -22,19 +22,9 @@ public class EmpruntController {
     this.service = service;
   }
 
-  @GetMapping(path = "/welcome")
-  public String welcomeMessage() {
-    return "Welcome to the book application !";
-  }
-
   @PostMapping(path = "/create-emprunt")
   public void createEmprunt(@RequestBody Emprunt emprunt){
     service.create(emprunt);
-  }
-
-  @PostMapping(path = "/create-emprunts")
-  public void createEmprunts(@RequestBody List<Emprunt> emprunts){
-    service.createAll(emprunts);
   }
 
   @GetMapping("/get-emprunt-by-id/{id}")
